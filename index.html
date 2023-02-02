@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Landing Page </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./logo.png" media="(prefers-color-scheme:light)">
+    <link rel="icon" href="./image.png" media="(prefers-color-scheme:dark)">
+
+</head>
+<body>
+
+    <section class="sec">
+        <header>
+            <a href="#"> <img src="./logo.png" class="logo"> </a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="#">Products</a> </li>
+                <li> <a href="#">What's New</a> </li>
+                <li> <a href="#">Newsletter</a> </li>
+                <li> <a href="#">Contact</a> </li>
+                <li class="icon"><ion-icon name="cart-outline"></ion-icon></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="textBox">
+                <h2>Just<br><span>do it</span> </h2>
+                <p>The world's largest athletic apparel company, Nike is best known for its footwear, apparel, and equipment.One of the most valuable brands among sport businesses, Nike employs over 76,000 people worldwide.</p>
+                <a href="#">Buy Now</a>
+            </div>
+
+            <div class="imgBox">
+                <img src="./nike01.png" class="nike">
+            </div>
+        </div>
+
+        <ul class="thumb">
+            <li> <img src="./nike01.png" onclick="imgSlider('nike01.png'); changeBgColor('#2c2b30')"> </li>
+            <li> <img src="./nike02.png" onclick="imgSlider('nike02.png'); changeBgColor('#a19d94')"> </li>
+            <li> <img src="./nike03.png" onclick="imgSlider('nike03.png'); changeBgColor('#ac1425')"> </li>
+        </ul>
+
+        <ul class="sci">
+            <li> <a href="#"> <ion-icon name="logo-facebook"></ion-icon> </a> </li>
+            <li> <a href="#"> <ion-icon name="logo-twitter"></ion-icon> </a> </li>
+            <li> <a href="#"> <ion-icon name="logo-linkedin"></ion-icon> </a> </li>
+        </ul>
+
+    </section>
+
+
+
+
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.nike').src = anything;
+        }
+
+        function changeBgColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+
+        function menuToggle(){
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+    </script>
+    
+</body>
+</html>
